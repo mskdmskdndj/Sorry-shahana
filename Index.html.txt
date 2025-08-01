@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A Romantic Apology</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Heart Background -->
+  <div class="hearts"></div>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loader-text">Sorry Madam Ji</div>
+    <div class="subtitle-text">khas Aapke liya</div>
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Countdown Screen -->
+  <div id="countdown-screen" class="hidden">
+    <div id="countdown-number">3</div>
+  </div>
+
+  <!-- Matrix Animation -->
+  <canvas id="matrix-canvas" class="hidden"></canvas>
+
+  <!-- Love Quote -->
+  <div id="quote-screen" class="hidden">
+    <p class="quote-text">"Mohabbat galti nahi karti, kabhi kabhi bas waqt sahi nahi hota..." 💕</p>
+  </div>
+
+  <!-- Cute Cat Animation -->
+  <div id="cat-animation" class="hidden">
+   <img src="https://i.pinimg.com/originals/fe/b3/e8/feb3e8d8eb274ea0b76195a7a1a485a0.gif" alt="Animated Pikachu waving GIF">
+    <div class="happy-birthday-text">💕Please forgive me💕</div>
+  </div>
+
+  <!-- The Card -->
+  <div id="card-container" class="hidden">
+    <div class="card" id="card">
+      <div class="card-face card-front">
+        <div class="card-content">
+          <p>Click to open</p>
+        </div>
+      </div>
+      <div class="card-face card-middle">
+        <div class="card-content">
+          <h2>I Love You Sooooo Much😘&</h2>
+            <p>I Miss You💕</p>
+        </div>
+      </div>
+      <div class="card-face card-back">
+        <div class="card-content">
+          <h2>Shahana ji ❤️</h2>
+          <p>
+            Kabhi kabhi humse galti ho jaati hai, lekin meri feelings aapke liye kabhi nahi badli.<br>
+            Mujhe maaf kar dijiye aur ek aur moka dijiye,<br>
+            Ab main aage se kabhi aisa nahi karunga.
+          </p>
+          <p class="signature">Aapka, Vivek ❤️</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <audio id="background-music" loop>
+    <source src="https://youtu.be/8ELbX5CMomE?si=Y00joPXiNWxp5Xea" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, #ffe6f0, #ffe4e1);
+  font-family: 'Dancing Script', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.heart {
+  position: absolute;
+  font-size: 2em;
+  color: #ff69b4;
+  animation: floatUp linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(100vh) scale(1); opacity: 0.8; }
+  100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+}
+
+#loading-screen {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  z-index: 2;
+}
+
+.loader-text {
+  font-size: 2.5em;
+  color: #ff69b4;
+}
+
+.subtitle-text {
+  font-size: 1.2em;
+  color: #cc6699;
+  margin-top: 10px;
+}
+
+.spinner {
+  border: 4px solid rgba(255, 105, 180, 0.3);
+  border-top: 4px solid #ff69b4;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-top: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#countdown-screen {
+  font-size: 10em;
+  font-weight: bold;
+  animation: zoom-fade 1s ease-in-out infinite;
+  color: #ff69b4;
+  z-index: 2;
+}
+
+@keyframes zoom-fade {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+#matrix-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+
+#cat-animation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+#cat-animation img {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 15px;
+}
+
+.happy-birthday-text {
+  margin-top: 20px;
+  font-size: 2.5em;
+  color: #ff69b4;
+  text-shadow: 2px 2px 4px #000;
+  font-weight: bold;
+}
+
+#quote-screen .quote-text {
+  font-size: 2em;
+  color: #c2185b;
+  animation: fadeIn 3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+#card-container {
+  perspective: 1000px;
+  z-index: 3;
+}
+
+.card {
+  width: 300px;
+  height: 420px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  cursor: pointer;
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.6);
+  background-color: #fff0f5;
+  color: #4b2c34;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card-front {
+  transform: rotateY(0deg);
+  background-color: #ffe6eb;
+  color: #6c1c3c;
+}
+
+.card-middle {
+  transform: rotateY(120deg);
+}
+
+.card-back {
+  transform: rotateY(240deg);
+}
+
+.card-content h2 {
+  color: #d63384;
+}
+
+.card-content p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.signature {
+  margin-top: 20px;
+  font-style: italic;
+  text-align: right;
+  width: 100%;
+}
